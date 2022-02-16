@@ -63,5 +63,8 @@ dependencies {
     implementation 'com.google.guava:guava:28.1-android'
 //    implementation 'org.tensorflow:tensorflow-lite:2.1.0'
 //    implementation 'org.tensorflow:tensorflow-lite-select-tf-ops:0.0.0-nightly'
-    implementation(name: 'tensorflow-lite-with-select-tf-ops-0.0.0-nightly', ext: 'aar')
+    implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly-SNAPSHOT'
+    // This dependency adds the necessary TF op support.
+    implementation 'org.tensorflow:tensorflow-lite-select-tf-ops:0.0.0-nightly-SNAPSHOT'
+//    implementation(name: 'tensorflow-lite-with-select-tf-ops-0.0.0-nightly', ext: 'aar')
 }

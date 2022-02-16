@@ -26,25 +26,4 @@
             android:textAppearance="@style/TextAppearanceMainVisionNlp" />
     </FrameLayout>
 
-    <FrameLayout
-        android:id="@+id/main_korean_click_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        style="@style/Clickable"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHeight_percent=".5"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_english_click_view">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableTop="@drawable/korea_flag"
-            android:layout_gravity="center"
-            android:text="@string/korean"
-            android:drawablePadding="16dp"
-            android:textAppearance="@style/TextAppearanceMainVisionNlp" />
-    </FrameLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

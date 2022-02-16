@@ -39,7 +39,8 @@ import java.util.Map;
 public class IMDBTensorflowActivity extends BaseModuleActivity {
     private static final String TAG = "IMDBTensorflowDemo";
     private static final int NUM_LITE_THREADS = 4;
-    private static final String MODEL_PATH = "imdb_small.tflite";
+    //private static final String MODEL_PATH = "imdb_small.tflite";
+    private static final String MODEL_PATH = "debiased-bertOptimizedMetadata.tflite";
     private static final String DIC_PATH = "imdb_vocab.txt";
 
     private static final long EDIT_TEXT_STOP_DELAY = 600l;

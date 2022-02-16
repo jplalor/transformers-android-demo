@@ -15,10 +15,7 @@ public class EnglishNLPListActivity extends AbstractListActivity {
             final Intent intent = new Intent(EnglishNLPListActivity.this, IMDBTensorflowActivity.class);
             startActivity(intent);
         });
-        findViewById(R.id.nlp_card_imdb_pytorch_click_area).setOnClickListener(v -> {
-            final Intent intent = new Intent(EnglishNLPListActivity.this, IMDBPytorchActivity.class);
-            startActivity(intent);
-        });
+
     }
 
     @Override

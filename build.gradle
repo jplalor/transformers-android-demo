@@ -1,5 +1,10 @@
 buildscript {
     repositories {
+        mavenCentral()
+        maven {         // add this repo to use snapshots
+            name 'ossrh-snapshot'
+            url 'https://oss.sonatype.org/content/repositories/snapshots'
+        }
         google()
         jcenter()
         
@@ -12,9 +17,13 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
+        maven {         // add this repo to use snapshots
+            name 'ossrh-snapshot'
+            url 'https://oss.sonatype.org/content/repositories/snapshots'
+        }
         google()
         jcenter()
-        
     }
 }
 
