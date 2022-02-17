@@ -40,7 +40,8 @@ public class IMDBTensorflowActivity extends BaseModuleActivity {
     private static final String TAG = "IMDBTensorflowDemo";
     private static final int NUM_LITE_THREADS = 4;
     //private static final String MODEL_PATH = "imdb_small.tflite";
-    private static final String MODEL_PATH = "debiased-bertOptimizedMetadata.tflite";
+    //private static final String MODEL_PATH = "debiased-bertOptimizedMetadata.tflite";
+    private static final String MODEL_PATH = "tfdebiased2.tflite";
     private static final String DIC_PATH = "imdb_vocab.txt";
 
     private static final long EDIT_TEXT_STOP_DELAY = 600l;
@@ -194,16 +195,18 @@ public class IMDBTensorflowActivity extends BaseModuleActivity {
         float[][] softmaxLogits = new float[1][2];
         float[][] logits = new float[1][2];
         output.put(0, softmaxLogits);
-        output.put(1, logits);
+        //output.put(0, logits);
 
         Log.v(TAG, "Run inference...");
         final long moduleForwardStartTime = SystemClock.elapsedRealtime();
         tflite.runForMultipleInputsOutputs(new Object[]{inputIds}, output);
+        Log.v(TAG, output.toString());
         final long moduleForwardDuration = SystemClock.elapsedRealtime() - moduleForwardStartTime;
 
         float[] scores = new float[2];
         scores[0] = softmaxLogits[0][0];
         scores[1] = softmaxLogits[0][1];
+        Log.v(TAG, scores.toString());
         Log.v(TAG, "Finish!");
         return new AnalysisResult(scores, moduleForwardDuration);
     }
